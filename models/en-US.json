@@ -7,8 +7,10 @@
           "name": "MainMenuIntent",
           "slots": [],
           "samples": [
+            "go to the main menu",
+            "go to main menu",
+            "go to menu",
             "main menu",
-            "goto main menu",
             "menu"
           ]
         },
@@ -34,8 +36,10 @@
           "name": "PlayLatestSermonIntent",
           "slots": [],
           "samples": [
+            "and play the latest sermon",
             "play the latest sermon",
             "play latest sermon",
+            "and play latest",
             "play latest",
             "play sermon",
             "begin the latest sermon",
@@ -43,6 +47,7 @@
             "begin latest",
             "start latest sermon",
             "latest sermon",
+            "and start sermon",
             "start sermon",
             "latest",
             "sermon"
@@ -75,9 +80,10 @@
           "name": "ListSermonsIntent",
           "slots": [],
           "samples": [
+            "list sermons",
+            "list latest sermons",
             "sermons",
-            "latest sermons",
-            "list sermons"
+            "list"
           ]
         },
         {
@@ -95,7 +101,12 @@
         },
         {
           "name": "AMAZON.ResumeIntent",
-          "samples": []
+          "samples": [
+            "resume",
+            "resume sermon",
+            "remume playing",
+            "resume playing sermon"
+          ]
         },
         {
           "name": "AMAZON.YesIntent",
@@ -119,10 +130,15 @@
         },
         {
           "name": "AMAZON.NextIntent",
-          "samples": []
+          "samples": [
+            "next sermon",
+            "next set of sermons",
+            "more sermons",
+            "hear more sermons"
+          ]
         },
         {
-          "name": "AMAZON.ResumeIntent",
+          "name": "AMAZON.NavigateHomeIntent",
           "samples": []
         }
       ],

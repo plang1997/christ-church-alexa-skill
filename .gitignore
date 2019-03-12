@@ -8,3 +8,5 @@ coverage/
 lambda/custom/package-lock.json
 lambda/custom/.env
 test_output
+.idea
+*.iml
