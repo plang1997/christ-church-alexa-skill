@@ -1,0 +1,43 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Listen to sermons from Christ Church East Moline, Illinois.",
+          "examplePhrases": [
+            "Alexa, open Christ Church.",
+            "Alexa, ask Christ Church to play the latest sermon.",
+            "Alexa, ask Christ Church what is the latest sermon."
+          ],
+          "keywords": ["christ church", "christ", "church", "jesus", "quad cities", "east moline", "silvis", "methodist", "united methodist"],
+          "name": "Christ Church",
+          "description": "Listen to sermons and find out what else is going on at Christ Church East Moline Illinois."
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "None",
+      "category": "LIFESTYLE_RELIGION_AND_SPIRITUALITY",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda/custom"
+        },
+        "interfaces": [
+          {
+            "type": "RENDER_TEMPLATE"
+          }
+        ]
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "isExportCompliant": true,
+      "containsAds": false,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}

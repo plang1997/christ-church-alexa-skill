@@ -1,0 +1,11 @@
+{
+  "name": "christ-church-alexa-skill",
+  "version": "1.0.0",
+  "description": "Christ Church Alexa Skill",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ask-sdk": "^2.1.0-beta.1"
+  }
+}

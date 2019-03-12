@@ -1,0 +1,132 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "christ church",
+      "intents": [
+        {
+          "name": "MainMenuIntent",
+          "slots": [],
+          "samples": [
+            "main menu",
+            "goto main menu",
+            "menu"
+          ]
+        },
+        {
+          "name": "UpcomingEventsIntent",
+          "slots": [],
+          "samples": [
+            "upcoming events",
+            "events",
+            "upcoming"
+          ]
+        },
+        {
+          "name": "ServiceTimesIntent",
+          "slots": [],
+          "samples": [
+            "services",
+            "times",
+            "service times"
+          ]
+        },
+        {
+          "name": "PlayLatestSermonIntent",
+          "slots": [],
+          "samples": [
+            "play the latest sermon",
+            "play latest sermon",
+            "play latest",
+            "play sermon",
+            "begin the latest sermon",
+            "begin latest sermon",
+            "begin latest",
+            "start latest sermon",
+            "latest sermon",
+            "start sermon",
+            "latest",
+            "sermon"
+          ]
+        },
+        {
+          "name": "PlaySermonByIndexIntent",
+          "slots": [
+            {
+              "name": "Index",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "play sermon {Index}",
+            "play {Index}",
+            "sermon {Index}",
+            "{Index}"
+          ]
+        },
+        {
+          "name": "LatestSermonIntent",
+          "slots": [],
+          "samples": [
+            "what is the latest sermon",
+            "tell me the latest sermon"
+          ]
+        },
+        {
+          "name": "ListSermonsIntent",
+          "slots": [],
+          "samples": [
+            "sermons",
+            "latest sermons",
+            "list sermons"
+          ]
+        },
+        {
+          "name": "ContactInformationIntent",
+          "slots": [],
+          "samples": [
+            "contact information",
+            "contact info",
+            "contact"
+          ]
+        },
+        {
+          "name": "AMAZON.PauseIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ResumeIntent",
+          "samples": []
+        }
+      ],
+      "types": []
+    }
+  }
+}
