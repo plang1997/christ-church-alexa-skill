@@ -6,6 +6,6 @@ coverage/
 *.code-workspace
 *.zip
 test_output
-.idea
+.idea/
 *.iml
 etc/
