@@ -6,7 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "ask-sdk": "^2.1.0-beta.1",
+    "alexa-sdk": "^1.0.25",
+    "ask-sdk": "^2.7.0",
+    "ask-sdk-v1adapter": "^2.7.0",
     "feedparser": "1.1.4",
     "html-entities": "1.2.0",
     "htmlparser2": "3.9.2",

@@ -3,30 +3,47 @@
     "publishingInformation": {
       "locales": {
         "en-US": {
-          "summary": "Listen to sermons from Christ Church East Moline, Illinois.",
+          "summary": "Listen to sermons from Christ Church in East Moline, Illinois.",
           "examplePhrases": [
             "Alexa, open Christ Church.",
             "Alexa, ask Christ Church to play the latest sermon.",
             "Alexa, ask Christ Church what is the latest sermon."
           ],
-          "keywords": ["christ church", "christ", "church", "jesus", "quad cities", "east moline", "silvis", "methodist", "united methodist"],
+          "keywords": [
+            "christ church",
+            "christ",
+            "church",
+            "jesus",
+            "quad cities",
+            "east moline",
+            "carbon cliff",
+            "silvis",
+            "methodist",
+            "united methodist"
+          ],
           "name": "Christ Church",
-          "description": "Listen to sermons and find out what else is going on at Christ Church East Moline Illinois."
+          "description": "Listen to sermons and find out what else is going on at Christ Church in East Moline, Illinois.",
+          "smallIconUri": "http://patricklang.net/images/cumc_108.png",
+          "largeIconUri": "http://patricklang.net/images/cumc_512.png"
         }
       },
       "isAvailableWorldwide": true,
       "testingInstructions": "None",
-      "category": "LIFESTYLE_RELIGION_AND_SPIRITUALITY",
+      "category": "RELIGION_AND_SPIRITUALITY",
       "distributionCountries": []
     },
     "apis": {
       "custom": {
         "endpoint": {
-          "sourceDir": "lambda/custom"
+          "sourceDir": "lambda/custom",
+          "uri": "ask-christ-church"
         },
         "interfaces": [
           {
             "type": "RENDER_TEMPLATE"
+          },
+          {
+            "type": "AUDIO_PLAYER"
           }
         ]
       }

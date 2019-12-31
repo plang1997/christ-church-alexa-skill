@@ -1,7 +1,6 @@
 'use strict';
 
 const FeedParser = require('feedparser');
-// const fs = require('fs');
 const entities = require('html-entities').AllHtmlEntities;
 const request = require('request');
 const striptags = require('striptags');
@@ -9,8 +8,7 @@ const constants = require('./constants');
 
 const feedParser = function () {
     return {
-        getFeed : function (fileName, callback) {
-            let url = constants.sermonUrl;
+        getFeed : function (fileName, url, callback) {
             let req = request(url);
             let feedparser = new FeedParser(null);
             let items = [];
@@ -40,8 +38,15 @@ const feedParser = function () {
                         feedItem['title'] = entities.decode(striptags(feedItem['title']));
                         feedItem['title'] = feedItem['title'].trim();
                         feedItem['title'] = feedItem['title'].replace(/[&]/g,'and').replace(/[<>]/g,'');
-                        
+
                         feedItem['date'] = new Date(item['date']).toDateString();
+
+                        if (item['author']) {
+                            feedItem['author'] = item['author'];
+                            feedItem['author'] = entities.decode(striptags(feedItem['author']));
+                            feedItem['author'] = feedItem['author'].trim();
+                            feedItem['author'] = feedItem['author'].replace(/[&]/g,'and').replace(/[<>]/g,'').replace(/[“]/g,'').replace(/["]/g,'');
+                        }
 
                         if (item['description']) {
                             feedItem['description'] = item['description'];
@@ -64,7 +69,7 @@ const feedParser = function () {
                             feedItem.imageUrl['smallImageUrl'] = item.image.url.replace('http:','https:');
                             feedItem.imageUrl['largeImageUrl'] = item.image.url.replace('http:','https:');
                         }
-                        
+
                         items.push(feedItem);
                     }
                 }

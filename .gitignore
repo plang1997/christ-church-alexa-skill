@@ -5,8 +5,7 @@ npm-debug.log
 coverage/
 *.code-workspace
 *.zip
-lambda/custom/package-lock.json
-lambda/custom/.env
 test_output
 .idea
 *.iml
+etc/

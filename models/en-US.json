@@ -73,7 +73,10 @@
           "slots": [],
           "samples": [
             "what is the latest sermon",
-            "tell me the latest sermon"
+            "tell me the latest sermon",
+            "latest sermon",
+            "last sermon",
+            "latest"
           ]
         },
         {
@@ -101,12 +104,7 @@
         },
         {
           "name": "AMAZON.ResumeIntent",
-          "samples": [
-            "resume",
-            "resume sermon",
-            "remume playing",
-            "resume playing sermon"
-          ]
+          "samples": []
         },
         {
           "name": "AMAZON.YesIntent",
@@ -130,15 +128,46 @@
         },
         {
           "name": "AMAZON.NextIntent",
-          "samples": [
-            "next sermon",
-            "next set of sermons",
-            "more sermons",
-            "hear more sermons"
-          ]
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PreviousIntent",
+          "samples": []
         },
         {
           "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateSettingsIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollUpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollLeftIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.ScrollRightIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.MoreIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageDownIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.PageUpIntent",
           "samples": []
         }
       ],

@@ -1,12 +1,17 @@
 "use strict";
 
 module.exports = Object.freeze({
+
+    appId : 'amzn1.ask.skill.2a02e04b-3e36-41f0-81f1-c86c9dd60ad0',
+
+    dynamoDBTableName : 'ask-christ-church',
+
+    feedFileName : 'feed.json',
+
     //  States
     states : {
         START_MODE : '_START_MODE',
-        FEED_MODE : '_FEED_MODE',
-        NO_NEW_ITEM : '_NO_NEW_ITEM',
-        SINGLE_FEED_MODE : '_SINGLE_FEED_MODE'
+        PLAY_MODE : '_PLAY_MODE'
     },
 
     //  Custom constants
@@ -21,12 +26,11 @@ module.exports = Object.freeze({
         '300' : '<break time = "300ms"/>',
         '500' : '<break time = "500ms"/>'
     },
-    
+
     // Time in minutes after which feeds fetched again.
     updateFeedTime : 5,
 
     sermonUrl : 'http://christchurcheastmoline.cloversites.com/podcast/b20a63f3-f8f6-49c0-937f-5ee6c806bf69.xml',
-    contactsUrl : 'http://christchurcheastmoline.org/about-us/contact-us',
 
     sermonsPerPage : 3,
 });
