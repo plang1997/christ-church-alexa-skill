@@ -6,11 +6,11 @@
       "merge": {},
       "resources": {
         "manifest": {
-          "eTag": "9a7b9093905f31e400d55b6b3899b3d8"
+          "eTag": "e78cded3b0b8b291c9e5441bd1db8fbb"
         },
         "interactionModel": {
           "en-US": {
-            "eTag": "e90471ef01316c651c9377a51e60365c"
+            "eTag": "ef952e977ad01656ce4e29dedd1370c2"
           }
         },
         "lambda": [
@@ -23,7 +23,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-christ-church",
             "handler": "index.handler",
-            "revisionId": "49faeb55-29b7-4033-b225-ba0e2433e505",
+            "revisionId": "17386a7c-182a-437a-a89f-d5e07bdc2019",
             "runtime": "nodejs8.10"
           }
         ]
