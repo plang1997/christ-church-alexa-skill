@@ -19,7 +19,8 @@ exports.handler = (event, context, callback) => {
     alexa.dynamoDBTableName = constants.dynamoDBTableName;
     alexa.registerHandlers(
         handlers,
-        audioEventHandlers
+        audioEventHandlers,
+        startModeEventHandlers
     );
     alexa.execute();
 };
@@ -28,6 +29,19 @@ exports.handler = (event, context, callback) => {
 
 let feed = [];
 exports.feed = feed;
+
+const startModeEventHandlers = Alexa.CreateStateHandler(constants.states.START_MODE, {
+    'Unhandled': function () {
+        console.log('Unhandled');
+        const cardTitle = 'Christ Church Unhandled';
+        const speechOutput = 'Sorry, I could not understand. You can say, Next or Previous to navigate through the playlist.';
+        const repromptText = 'Sorry, I could not understand. You can say, Next or Previous to navigate through the playlist.';
+        this.response.speak(speechOutput).listen(repromptText).cardRenderer(cardTitle, speechOutput, null);
+        this.emit(':responseReady');
+    }
+});
+
+exports.startModeEventHandlers = startModeEventHandlers;
 
 const handlers = {
     'NewSession' : function () {
@@ -61,8 +75,8 @@ const handlers = {
     'MainMenuIntent': function () {
         console.log('MainMenuIntent');
         const cardTitle = 'Christ Church Main Menu';
-        const speechOutput = 'Main Menu options are: latest sermon, list sermons, upcoming vents, contact information, and service times. Or you can say Cancel to exit the skill.';
-        const repromptText = 'Again you can say: latest sermon, list sermons, upcoming vents, contact information, and service times. Or you can say Cancel to exit the skill.';
+        const speechOutput = 'Main Menu options are: play the latest sermon, list sermons, upcoming vents, contact information, and service times. Or you can say Cancel to exit the skill.';
+        const repromptText = 'Again you can say: latest sermon, play the latest sermon, upcoming vents, contact information, and service times. Or you can say Cancel to exit the skill.';
         this.response.speak(speechOutput).listen(repromptText).cardRenderer(cardTitle, speechOutput, null);
         this.emit(':responseReady');
     },
@@ -93,15 +107,6 @@ const handlers = {
             'Silvis Campus has a Traditional Service at 10:45am.';
         this.response.speak(speechOutput).listen(repromptText).cardRenderer(cardTitle, speechOutput, null);
         this.emit(':responseReady');
-    },
-    'LatestSermonIntent': function () {
-        console.log('LatestSermonIntent');
-        const cardTitle = 'Christ Church Latest Sermon';
-        const speechOutput = 'The latest sermon is ' +
-            feed[0].title + ' by ' + feed[0].author + ' given on ' + feed[0].date + ', ' +
-            'Would you like me to play it?';
-        const repromptText = 'Would you like me to play the latest sermon?';
-        this.emit(':askWithCard', speechOutput, repromptText, cardTitle, speechOutput, null);
     },
     'ListSermonsIntent': function () {
         console.log('ListSermonsIntent');
@@ -237,7 +242,7 @@ const handlers = {
         const speechOutput = 'Sorry, I could not understand. You can say, Next or Previous to navigate through the playlist.';
         const repromptText = 'Sorry, I could not understand. You can say, Next or Previous to navigate through the playlist.';
         this.response.speak(speechOutput).listen(repromptText).cardRenderer(cardTitle, speechOutput, null);
-        this.emit('responseReady');
+        this.emit(':responseReady');
     }
 };
 

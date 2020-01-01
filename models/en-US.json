@@ -69,17 +69,6 @@
           ]
         },
         {
-          "name": "LatestSermonIntent",
-          "slots": [],
-          "samples": [
-            "what is the latest sermon",
-            "tell me the latest sermon",
-            "latest sermon",
-            "last sermon",
-            "latest"
-          ]
-        },
-        {
           "name": "ListSermonsIntent",
           "slots": [],
           "samples": [

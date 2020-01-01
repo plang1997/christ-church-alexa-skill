@@ -10,7 +10,7 @@
         },
         "interactionModel": {
           "en-US": {
-            "eTag": "d421dcefaa3fc91e3219936543c07976"
+            "eTag": "e90471ef01316c651c9377a51e60365c"
           }
         },
         "lambda": [
@@ -23,7 +23,7 @@
             "codeUri": "lambda/custom",
             "functionName": "ask-christ-church",
             "handler": "index.handler",
-            "revisionId": "6b5c8c08-800c-4f2a-a1c0-103bdb762db6",
+            "revisionId": "49faeb55-29b7-4033-b225-ba0e2433e505",
             "runtime": "nodejs8.10"
           }
         ]
