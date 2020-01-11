@@ -34,7 +34,7 @@
     "apis": {
       "custom": {
         "endpoint": {
-          "sourceDir": "lambda/custom",
+          "sourceDir": "lambda/skill",
           "uri": "ask-christ-church"
         },
         "interfaces": [

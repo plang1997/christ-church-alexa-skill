@@ -10,7 +10,7 @@
         },
         "interactionModel": {
           "en-US": {
-            "eTag": "ef952e977ad01656ce4e29dedd1370c2"
+            "eTag": "4568206672718bb743b94407865d7daf"
           }
         },
         "lambda": [
@@ -20,10 +20,10 @@
             ],
             "arn": "arn:aws:lambda:us-east-1:242068192840:function:ask-christ-church",
             "awsRegion": "us-east-1",
-            "codeUri": "lambda/custom",
+            "codeUri": "lambda/skill",
             "functionName": "ask-christ-church",
             "handler": "index.handler",
-            "revisionId": "17386a7c-182a-437a-a89f-d5e07bdc2019",
+            "revisionId": "d412a874-5eba-440a-b25e-d4c5623b1ad5",
             "runtime": "nodejs8.10"
           }
         ]
